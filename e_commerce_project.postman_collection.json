@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "82244938-fa61-4fb1-9ed3-97e44bdf2aee",
+		"name": "e_commerce_project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34170061"
+	},
+	"item": [
+		{
+			"name": "GET CUSTOMERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:5000/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "GET CUSTOMER BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:5000/customers/2"
+			},
+			"response": []
+		},
+		{
+			"name": "GET PRODUCTS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:5000/products"
+			},
+			"response": []
+		},
+		{
+			"name": "GET PRODUCTS BY NAME",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:5000/products/by-name/plushie"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ORDERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:5000/orders"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ORDERS BY CUSTOMER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:5000/orders/2"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE CUSTOMER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jett\",\r\n    \"email\": \"knives_out@gmail.com\",\r\n    \"phone\": \"800-355-3452\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE PRODUCT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"name\": \"Plushie\",\r\n        \"price\": \"50.00\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/products"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE ORDER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"date\": \"2023-04-12\",\r\n    \"customer_id\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/orders"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE CUSTOMER",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Reaper\",\r\n    \"email\": \"diediedie@gmail.com\",\r\n    \"phone\": \"800-000-000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/customers/2"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE PRODUCT",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"name\": \"Funko-Pop\",\r\n        \"price\": \"100.00\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/products/2"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE ORDER",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"date\": \"2000-04-12\",\r\n    \"customer_id\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/orders/4"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE CUSTOMER",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:5000/customers/1"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE PRODUCT",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:5000/products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ORDER",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:5000/orders/3"
+			},
+			"response": []
+		}
+	]
+}
